@@ -1,18 +1,25 @@
 .nav-bar {
-  background-color: $color-halloween;
-  color: $color-halloween-white;
+  background-color: $color-blue;
+  color: #fff;
   display: grid;
   height: 7rem;
   width: 1200px;
   margin: auto;
-  box-shadow: $box-shadow-large;
-  border: 1px solid $color-halloween;
+  overflow: none;
+  box-shadow: $box-shadow-page;
   grid-template-columns: 3% 7% 15% 50% 25%;
   z-index: 5;
+
 
   @media only screen and (max-width: $bp-largest){
     width: 100vw;
   }
+  @media only screen and (max-width: $bp-smallest){
+    width: 100vw;
+    
+  }
+
+
 
   &__logo{
     grid-column: 2/3;
@@ -58,7 +65,7 @@
     }
     
     &:hover {
-      color: $color-halloween-orange;
+      color: $color-yellow;
     }
 
     &-page {
@@ -98,9 +105,9 @@
       width: 4rem;
       margin-left: 2rem;
       justify-self: center;
-      fill: $color-halloween-white;
+      fill: #fff;
       &:hover {
-        fill: $color-halloween-orange;
+        fill: $color-yellow;
       }
     }
   }
@@ -114,7 +121,7 @@
   &__link {
     font-size: 1.4rem;
     align-self: center;
-    color: $color-halloween-white;
+    color: #fff;
     font-family: Montserrat, sans-serif;
     text-decoration: none;
 
@@ -136,7 +143,7 @@
 // }
 
 .menu {
-  fill: $color-halloween-white;
+  fill: #fff;
   align-self: center;
   cursor: pointer;
   display: none;
@@ -146,7 +153,7 @@
   }
 
   &:hover {
-    fill: $color-halloween-orange;
+    fill: $color-green;
   }
 }
 
