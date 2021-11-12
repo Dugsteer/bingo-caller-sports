@@ -103,7 +103,7 @@ const bingoArray = [
     button2.style.display = "none";
     imgdiv.style.display = "none";
     title.style.display = "none";
-    container.style.gridTemplateRows = "10rem auto;"
+    container.style.gridTemplateRows = "auto minmax(20rem, auto)";
     gameboard.classList.add("unCenter");
     gameboard.innerHTML = "";
     const oldArray = bingoArray;
@@ -119,7 +119,7 @@ const bingoArray = [
     button0.style.display = "none";
     imgdiv.style.display = "none";
     title.style.display = "none";
-    container.style.gridTemplateRows = "10rem auto;"
+    container.style.gridTemplateRows = "auto minmax(20rem, auto)";
     gameboard.classList.add("unCenter");
     gameboard.innerHTML = "";
     const oldArray = bingoArray;
@@ -137,7 +137,7 @@ const bingoArray = [
       div.innerHTML = `
     <div class="minicard text-center">
     <img src="./img/${item}">
-    <h3 class="minicard__h3">${item.slice(0, -4)}</h3>
+    <h3 class="minicard__h3">${item.slice(0, -4).replace("-", " ")}</h3>
   </div>
   `;
       gameboard.appendChild(div);
@@ -149,7 +149,7 @@ const bingoArray = [
       let div = document.createElement("div");
       (item.length < 2) ? console.log('no') : 
       div.innerHTML = `
-    <div class="minicard text-center d-flex justify-content-center">
+    <div class="minicard text-center">
     <img src="./img/${item}">
   </div>
   `;
@@ -164,8 +164,8 @@ const bingoArray = [
     newArray.forEach(function (item) {
       var div = document.createElement("div");
       div.innerHTML = `
-    <div class="minicard text-center d-flex justify-content-center">
-    <h3 class="minicard__h3">${item.slice(0, -4)}</h3>
+    <div class="minicard text-center">
+    <h3 class="minicard__h3">${item.slice(0, -4).replace("-", " ")}</h3>
   </div>
   `;
       gameboard.appendChild(div);
